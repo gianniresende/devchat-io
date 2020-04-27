@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Wed Oct 25 2017 13:24:09 GMT+0000 (UTC)  -->
-<html data-wf-page="59f08e57ffa063000139e9cb" data-wf-site="59f067da9cd27200014f0cad">
+<html data-wf-page="59f067da9cd27200014f0cae" data-wf-site="59f067da9cd27200014f0cad">
 <head>
   <meta charset="utf-8">
-  <title>Home</title>
-  <meta content="Home" property="og:title">
+  <title>ChatSocket.io</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -19,13 +18,30 @@
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
 </head>
 <body>
-  <div class="container-2 w-container">
-    <form class="lobby" method="POST">
-      <h1 class="heading">Seja bem-vindo</h1>
-      <div>Informe seu nome para começar:</div>
-      <input class="div-block-3" name="name" style="width: 100%;"/><br>
-      <input type="submit" class="w-button" value="Entrar" />
-    </form>
+  <div class="container w-container">
+    <div class="rooms">
+      <h1 class="title-rooms">Salas Disponíveis</h1>
+      <ul class="room-list w-list-unstyled">
+        <li class="room-item">Sala 1</li>
+        <li class="room-item">Sala 2</li>
+        <li class="room-item">Sala 3 <span class="notifications">(2)</span></li>
+      </ul>
+      <div class="add-room">+</div>
+    </div>
+    <div class="room">
+      <div class="messages">
+        <div class="message"><span class="author">Tulio Faria</span><br><span class="msg-body">Mensagem aqui</span></div>
+      </div>
+      <div class="new-message-form w-form">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form"><textarea id="field" name="field" maxlength="5000" placeholder="Digite sua mensagem e pressione &lt;Enter&gt;" autofocus="true" class="msg w-input"></textarea><a href="#" class="send-audio w-button">Enviar<br>Áudio</a></form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
